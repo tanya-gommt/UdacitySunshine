@@ -55,8 +55,10 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mVisualizerView.setShowBass(sharedPreferences.getBoolean(getString(R.string.pref_show_bass_key),
                 getResources().getBoolean(R.bool.pref_show_bass_default)));
-        mVisualizerView.setShowMid(true);
-        mVisualizerView.setShowTreble(true);
+        mVisualizerView.setShowMid(sharedPreferences.getBoolean(getString(R.string.pref_show_midrange_key),
+                getResources().getBoolean(R.bool.pref_show_midrange_default)));
+        mVisualizerView.setShowTreble(sharedPreferences.getBoolean(getString(R.string.pref_show_treble_key),
+                getResources().getBoolean(R.bool.pref_show_treble_default)));
         mVisualizerView.setMinSizeScale(1);
         mVisualizerView.setColor(getString(R.string.pref_color_red_value));
         // Register the listener
@@ -65,9 +67,19 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        //show bass
         if (key.equals(getString(R.string.pref_show_bass_key))) {
             mVisualizerView.setShowBass(sharedPreferences.getBoolean(key, getResources().getBoolean(R.bool.pref_show_bass_default)));
         }
+        //show treble
+        else if (key.equals(getString(R.string.pref_show_treble_key))){
+            mVisualizerView.setShowTreble(sharedPreferences.getBoolean(key,getResources().getBoolean(R.bool.pref_show_treble_default)));
+        }
+        //show mid-range
+        else if (key.equals(getString(R.string.pref_show_midrange_key))){
+            mVisualizerView.setShowMid(sharedPreferences.getBoolean(key,getResources().getBoolean(R.bool.pref_show_midrange_default)));
+        }
+
     }
 
     @Override
