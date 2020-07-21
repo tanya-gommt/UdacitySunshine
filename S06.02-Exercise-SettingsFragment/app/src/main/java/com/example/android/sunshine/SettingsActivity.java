@@ -16,6 +16,7 @@
 package com.example.android.sunshine;
 
 import android.os.Bundle;
+import android.preference.Preference;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
@@ -61,4 +62,5 @@ public class SettingsActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
