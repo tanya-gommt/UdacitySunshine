@@ -33,9 +33,9 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     // TODO (1) Create a static final key to store the query's URL
-
+     private  static final String SEARCH_QUERY_URL="query";
     // TODO (2) Create a static final key to store the search's raw JSON
-
+    private  static final String QUERY_RAW_JSON = "results";
     private EditText mSearchBoxEditText;
 
     private TextView mUrlDisplayTextView;
@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO (3) Override onSaveInstanceState to persist data across Activity recreation
     // Do the following steps within onSaveInstanceState
+
     // TODO (4) Make sure super.onSaveInstanceState is called before doing anything else
 
     // TODO (5) Put the contents of the TextView that contains our URL into a variable
@@ -160,4 +161,14 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO (7) Put the contents of the TextView that contains our raw JSON search results into a variable
     // TODO (8) Using the key for the raw JSON search results, put the search results into the outState Bundle
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String urlContainer = mUrlDisplayTextView.toString();
+        outState.putString(SEARCH_QUERY_URL,urlContainer);
+        String txtViewContainer = (String) mSearchResultsTextView.getText();
+        outState.putString(QUERY_RAW_JSON,txtViewContainer);
+    }
 }
