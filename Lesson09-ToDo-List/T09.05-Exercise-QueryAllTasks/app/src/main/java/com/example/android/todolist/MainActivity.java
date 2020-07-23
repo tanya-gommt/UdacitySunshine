@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements
                     e.printStackTrace();
                     return null;
                 }
-                
+
             }
 
             // deliverResult sends the result of the load, a Cursor, to the registered listener
