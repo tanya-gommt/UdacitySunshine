@@ -22,7 +22,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.android.todolist.data.TaskContract.TaskEntry;
 
-
+//open helper for ver n db creatn management
 public class TaskDbHelper extends SQLiteOpenHelper {
 
     // The name of the database
