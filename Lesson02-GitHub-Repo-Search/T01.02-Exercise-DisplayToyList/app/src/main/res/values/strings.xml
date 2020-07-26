@@ -12,10 +12,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
--->
+  -->
 <resources>
-    <string name="app_name">Github Query</string>
-    <string name="search">Search</string>
-    <!--TODO (1) Add a string stating that an error has occurred-->
-    <string name="error_message">Failed to gt your results! Please try later.</string>
+    <string name="app_name">Project Setup</string>
 </resources>

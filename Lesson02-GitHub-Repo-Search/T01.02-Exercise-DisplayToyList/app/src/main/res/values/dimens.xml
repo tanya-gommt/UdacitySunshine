@@ -12,10 +12,9 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
--->
+  -->
 <resources>
-    <string name="app_name">Github Query</string>
-    <string name="search">Search</string>
-    <!--TODO (1) Add a string stating that an error has occurred-->
-    <string name="error_message">Failed to gt your results! Please try later.</string>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>
