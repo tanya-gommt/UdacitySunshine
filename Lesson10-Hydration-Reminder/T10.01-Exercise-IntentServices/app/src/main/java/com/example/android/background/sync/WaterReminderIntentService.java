@@ -1,4 +1,4 @@
-/*
+package com.example.android.background.sync;/*
  * Copyright (C) 2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+import android.app.IntentService;
+import android.content.Intent;
+import android.support.annotation.Nullable;
+
+import com.example.android.background.sync.ReminderTasks;
+
+public class WaterReminderIntentService extends IntentService{
+
+    public WaterReminderIntentService() {
+        super("WaterReminderIntentService");
+    }
+
+    @Override
+    protected void onHandleIntent(@Nullable Intent intent) {
+        String action = intent.getAction();
+        ReminderTasks.executeTask(this,action);
+
+    }
+}
 
 // TODO (9) Create WaterReminderIntentService and extend it from IntentService
 
